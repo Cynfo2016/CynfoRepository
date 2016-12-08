@@ -9,6 +9,7 @@ namespace CynfoApp
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            System.Console.WriteLine("Hello");
         }
     }
 }
