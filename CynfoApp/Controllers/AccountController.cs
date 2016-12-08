@@ -12,10 +12,10 @@ using CynfoApp.Models;
 
 namespace CynfoApp.Controllers
 {
-    [Authorize]
-    public class AccountController : Controller
+    [Authorize] 
+    public class AccountController : Controller 
     {
-        private ApplicationSignInManager _signInManager;
+        private ApplicationSignInManager _signInManager; 
         private ApplicationUserManager _userManager;
 
         public AccountController()
