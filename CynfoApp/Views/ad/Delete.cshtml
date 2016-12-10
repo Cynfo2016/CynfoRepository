@@ -1,0 +1,64 @@
+﻿@model CynfoApp.Models.adModels
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Advertisement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.adTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adMediaUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adMediaUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adPublishedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adPublishedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adFinishedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adFinishedDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

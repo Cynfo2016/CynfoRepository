@@ -1,0 +1,57 @@
+﻿@model CynfoApp.Models.adModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Advertisement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.adTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adPublishedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adPublishedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adFinishedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adFinishedDate)
+        </dd>
+
+        @if (Model.adMediaUrl != null)
+        {
+            <dd>
+                <img src="@Model.adMediaUrl" title="@Model.adTitle" />
+            </dd>
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { idad = Model.idad }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

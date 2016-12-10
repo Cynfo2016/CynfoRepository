@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CynfoApp.Models.adModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.adTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adMediaUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adPublishedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adFinishedDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.adTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adMediaUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adArea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adPublishedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adFinishedDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { idad = item.idad }) |
+                @Html.ActionLink("Details", "Details", new { idad = item.idad }) |
+                @Html.ActionLink("Delete", "Delete", new { idad = item.idad })
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -5,8 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-
-
+using System.Threading.Tasks;
 
 namespace CynfoApp.Models
 {
@@ -27,6 +26,8 @@ namespace CynfoApp.Models
 
     public class DefaultConnectioncontext : DbContext
     {
+        public Task<adModels> ad { get; internal set; }
+        public Task<object> Ads { get; internal set; }
         public DbSet<BeaconModels> beacon { get; set; }
     }
 }
